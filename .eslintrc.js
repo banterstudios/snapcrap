@@ -7,8 +7,7 @@ module.exports = {
   "plugins": [
     "standard",
     "promise",
-    "react",
-    "chai-friendly"
+    "react"
   ],
   "env": {
     "es6": true,
@@ -41,9 +40,6 @@ module.exports = {
     "comma-dangle": OFF
   },
   "globals": {
-    "require": true,
-    "it": true,
-    "describe": true,
-    "beforeEach": true
+    "require": true
   }
 }
