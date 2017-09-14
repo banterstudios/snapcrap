@@ -4,16 +4,17 @@
  * @flow
  */
 
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+
 import {
   AppRegistry,
   StyleSheet,
   Text,
   View
-} from 'react-native';
+} from 'react-native'
 
 export default class SnapCrap extends Component {
-  render() {
+  render () {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>
@@ -27,7 +28,7 @@ export default class SnapCrap extends Component {
           Shake or press menu button for dev menu
         </Text>
       </View>
-    );
+    )
   }
 }
 
@@ -47,7 +48,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     color: '#333333',
     marginBottom: 5,
-  },
-});
+  }
+})
 
-AppRegistry.registerComponent('SnapCrap', () => SnapCrap);
+AppRegistry.registerComponent('SnapCrap', () => SnapCrap)
