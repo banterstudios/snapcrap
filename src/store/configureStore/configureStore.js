@@ -15,8 +15,8 @@ let middleware
 
 if (isDev) {
   middleware = [
-    thunkMiddleware,
-    immutableStateInvariant
+    immutableStateInvariant(),
+    thunkMiddleware
   ]
 } else {
   middleware = [

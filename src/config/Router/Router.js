@@ -13,7 +13,10 @@ const Test = () => {
 
 const Router = StackNavigator({
   Login: {
-    screen: Test
+    screen: Test,
+    navigationOptions: {
+      title: 'Login'
+    }
   }
 }, {
   swipeEnabled: true,
