@@ -5,7 +5,7 @@ import {
 
 import thunkMiddleware from 'redux-thunk'
 
-import rootReducer from 'reducers'
+import reducers from 'reducers'
 
 import immutableStateInvariant from 'redux-immutable-state-invariant'
 
@@ -26,7 +26,7 @@ if (isDev) {
 
 const configureStore = (initialState) => {
   return createStore(
-    rootReducer,
+    reducers,
     initialState,
     applyMiddleware(...middleware)
   )
