@@ -1,65 +1,41 @@
+import 'react-native'
+
 import React from 'react'
 
-import { Startup } from 'containers/Startup'
+import StartupContainer, { Startup } from './Startup'
 
-import thunk from 'redux-thunk'
+import renderer from 'react-test-renderer'
 
-import AuthenticatedRequest from 'middleware/AuthenticatedRequest'
+import { Provider } from 'react-redux'
 
 import configureMockStore from 'redux-mock-store'
 
-import chai, { expect } from 'chai'
+import thunk from 'redux-thunk'
 
-import { shallow } from 'enzyme'
-
-import { spy } from 'sinon'
-
-import chaiEnzyme from 'chai-enzyme'
-
-const invalidDatetoken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmb28iOiJiYXIiLCJleHAiOjEzOTMyODY4OTMsImlhdCI6MTM5MzI2ODg5M30.4-iaDojEVl0pJQMjrbM1EzUIfAZgsbK_kgnVyVxFSVo'
-
-const invalidToken = 'tH1sIsaF4K3T0ken'
-
-chai.use(chaiEnzyme())
-
-describe('Containers - Startup', () => {
-  let wrapper
-
-  const initialState = {
-    isReady: false,
-    authenticateUser: spy(),
-    noAuthentication: spy()
+const initialState = {
+  isReady: false,
+  auth: {
+    isReady: false
   }
+}
 
-  const mockStore = configureMockStore([thunk, AuthenticatedRequest])
+describe('containers - StartupContainer', () => {
+  const mockStore = configureMockStore([thunk])
   const store = mockStore(initialState)
-  const options = { context: { store } }
 
-  beforeEach(() => {
-    store.clearActions()
-    wrapper = shallow(<Startup {...initialState}><div className='test-child'/></Startup>, options)
+  it('should render correctly', () => {
+    const tree = renderer.create(
+      <Provider store={store}>
+        <StartupContainer />
+      </Provider>
+    )
   })
+})
 
-  it('should exist', () => {
-    expect(wrapper).to.exist
-  })
-
-  it('should no render children if props isReady is false', () => {
-    expect(wrapper.find('.test-child')).to.have.length(0)
-  })
-
-  it('should render children if props isReady is true', () => {
-    wrapper.setProps({isReady: true})
-    expect(wrapper.find('.test-child')).to.have.length(1)
-  })
-
-  it('should fail token validity as its expired', () => {
-    global.localStorage.setItem('user_token', invalidDatetoken)
-    expect(initialState.noAuthentication.called).to.be.true
-  })
-
-  it('should fail token validity as its a fake key', () => {
-    global.localStorage.setItem('user_token', invalidToken)
-    expect(initialState.noAuthentication.called).to.be.true
+describe('containers - StartupComponent', () => {
+  it('should render correctly', () => {
+    const tree = renderer.create(
+      <Startup {...initialState} />
+    )
   })
 })
