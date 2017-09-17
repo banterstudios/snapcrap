@@ -1,19 +1,14 @@
-import { StackNavigator } from 'react-navigation'
-
 import React from 'react'
 
-import { View } from 'react-native'
+import { StackNavigator } from 'react-navigation'
 
-const Test = () => {
-  return (
-    <View>
-    </View>
-  )
-}
+import Startup from 'containers/Startup'
 
-const Router = StackNavigator({
+import Login from 'views/Login'
+
+const Routes = StackNavigator({
   Login: {
-    screen: Test,
+    screen: Login,
     navigationOptions: {
       title: 'Login'
     }
@@ -27,5 +22,11 @@ const Router = StackNavigator({
     }
   }
 })
+
+const Router = (
+  <Startup>
+    <Routes />
+  </Startup>
+)
 
 export default Router

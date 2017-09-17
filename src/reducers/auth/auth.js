@@ -15,7 +15,7 @@ export const initialState = {
   token: '',
   details: {},
   isLoggedIn: false,
-  isReady: false,
+  isReady: true,
   error: {}
 }
 

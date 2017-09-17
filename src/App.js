@@ -9,7 +9,7 @@ import Router from 'config/Router'
 const App = () => {
   return (
     <Provider store={store}>
-      <Router />
+      { Router }
     </Provider>
   )
 }
