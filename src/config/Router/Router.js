@@ -1,5 +1,7 @@
 import React from 'react'
 
+import { constructNavigatorOptions } from 'utils/navigationUtils'
+
 import { StackNavigator } from 'react-navigation'
 
 import Startup from 'containers/Startup'
@@ -9,9 +11,7 @@ import Login from 'views/Login'
 const Routes = StackNavigator({
   Login: {
     screen: Login,
-    navigationOptions: {
-      title: 'Login'
-    }
+    navigationOptions: constructNavigatorOptions({ title: 'Login' })
   }
 }, {
   swipeEnabled: true,

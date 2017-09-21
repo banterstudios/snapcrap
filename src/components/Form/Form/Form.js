@@ -88,6 +88,7 @@ const formHoc = (formProps) => (WrappedComponent) => {
      */
     getChildContext () {
       return {
+        _form: true,
         update: this.props.update,
         submit: this.submit,
         values: this.props.values,
@@ -139,7 +140,8 @@ const formHoc = (formProps) => (WrappedComponent) => {
     isFormValid: PropTypes.func,
     validators: PropTypes.func,
     updateErrors: PropTypes.func,
-    errors: PropTypes.object
+    errors: PropTypes.object,
+    _form: PropTypes.bool
   }
 
   const mapStateToProps = (state, ownProps) => {

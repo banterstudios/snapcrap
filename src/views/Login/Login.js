@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 
 import { View, Text } from 'react-native'
 
+import styles from './Login.styles'
+
 class Login extends Component {
   constructor (props) {
     super(props)
@@ -9,7 +11,7 @@ class Login extends Component {
 
   render () {
     return (
-      <View>
+      <View style={styles.wrapper}>
         <Text>
           Login!
         </Text>
