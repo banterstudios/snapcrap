@@ -4,11 +4,11 @@ import {
 
 import {
   backgroundPrimary
-} from 'styles/colors'
+} from 'styles/colors.styles'
 
 import {
   heightWithHeader
-} from 'styles/ui'
+} from 'styles/ui.styles'
 
 export default StyleSheet.create({
   wrapper: {

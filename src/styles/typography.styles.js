@@ -1,3 +1,7 @@
+import {
+  StyleSheet
+} from 'react-native'
+
 /*
   Sizes
  */
@@ -14,9 +18,9 @@ export const footNoteSize = 12
 /*
   Weights
  */
-export const extraLight = 200
-export const regular = 400
-export const semiBold = 600
+export const extraLight = '200'
+export const regular = '400'
+export const semiBold = '600'
 
 /*
   Typography

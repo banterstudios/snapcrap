@@ -15,10 +15,14 @@ const textDark = black
 // Forms
 const placeholderPrimary = spanishGray
 
+// Linebreak
+const linebreakPrimary = spanishGray
+
 export {
   backgroundPrimary,
   backgroundSecondary,
   textLight,
   textDark,
-  placeholderPrimary
+  placeholderPrimary,
+  linebreakPrimary
 }

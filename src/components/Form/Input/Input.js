@@ -8,9 +8,9 @@ import styles from './Input.styles'
 
 import {
   placeholderPrimary
-} from 'styles/colors'
+} from 'styles/colors.styles'
 
-import typoStyles from 'styles/typography'
+import typoStyles from 'styles/typography.styles'
 
 class Input extends Component {
   constructor (props) {
@@ -60,6 +60,7 @@ class Input extends Component {
             blurOnSubmit={true}
             keyboardType={keyboardType}
             secureTextEntry={secureTextEntry}
+            underlineColorAndroid={'transparent'}
           />
         </View>
       </TouchableWithoutFeedback>

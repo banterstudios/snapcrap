@@ -3,9 +3,10 @@ import {
 } from 'react-native'
 
 export default StyleSheet.create({
-  inputComponent: {
-    marginTop: 20,
-    paddingBottom: 20,
-    textAlign: 'center'
+  formGroup: {
+    marginBottom: 20
+  },
+  formGroupLast: {
+    marginBottom: 0
   }
 })

@@ -1,7 +1,7 @@
 import {
   backgroundSecondary,
   textLight
-} from 'styles/colors'
+} from 'styles/colors.styles'
 
 import update from 'immutability-helper'
 
