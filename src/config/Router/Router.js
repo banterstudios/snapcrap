@@ -11,7 +11,10 @@ import Login from 'views/Login'
 const Routes = StackNavigator({
   Login: {
     screen: Login,
-    navigationOptions: constructNavigatorOptions({ title: 'Login' })
+    navigationOptions: constructNavigatorOptions({
+      title: 'Login',
+      header: null
+    })
   }
 }, {
   swipeEnabled: true,
