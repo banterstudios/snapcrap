@@ -17,7 +17,8 @@ export default StyleSheet.create({
     height: heightWithHeader,
     width: '100%',
     backgroundColor: backgroundPrimary,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center'
   },
   container: {
     flex: 1,

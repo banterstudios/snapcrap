@@ -3,6 +3,7 @@ const charcoal = '#363E45'
 const white = '#fff'
 const black = '#000'
 const spanishGray = '#979B9F'
+const transparent = 'transparent'
 
 // Backgrounds
 const backgroundPrimary = outerSpace
@@ -24,5 +25,6 @@ export {
   textLight,
   textDark,
   placeholderPrimary,
-  linebreakPrimary
+  linebreakPrimary,
+  transparent
 }

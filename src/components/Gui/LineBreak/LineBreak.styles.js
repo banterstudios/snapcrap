@@ -10,6 +10,10 @@ import {
 const margin = 10
 
 export default StyleSheet.create({
+  container: {
+    paddingLeft: 10,
+    paddingRight: 10
+  },
   linebreak: {
     height: 2,
     width: '100%',
