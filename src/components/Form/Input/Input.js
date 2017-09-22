@@ -94,7 +94,7 @@ Input.defaultProps = {
   multiline: false,
   keyboardType: 'default',
   secureTextEntry: false,
-  numberOfLines: 4,
+  numberOfLines: 1,
   returnKeyType: 'done'
 }
 

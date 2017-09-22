@@ -4,8 +4,8 @@ import {
 
 export default StyleSheet.create({
   inputComponent: {
-    marginTop: 20,
-    paddingBottom: 20,
+    // marginTop: 20,
+    // paddingBottom: 20,
     textAlign: 'center'
   }
 })

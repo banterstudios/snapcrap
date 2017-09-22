@@ -17,7 +17,9 @@ class Login extends Component {
     return (
       <View style={styles.wrapper}>
         <KeyboardAwareScrollView>
-          <LoginForm />
+          <View style={styles.container}>
+            <LoginForm />
+          </View>
         </KeyboardAwareScrollView>
       </View>
     )

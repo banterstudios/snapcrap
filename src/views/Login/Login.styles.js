@@ -13,9 +13,15 @@ import {
 export default StyleSheet.create({
   wrapper: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: 'row',
     height: heightWithHeader,
     width: '100%',
-    backgroundColor: backgroundPrimary
+    backgroundColor: backgroundPrimary,
+    alignItems: 'center'
+  },
+  container: {
+    flex: 1,
+    width: '100%',
+    padding: 20
   }
 })
