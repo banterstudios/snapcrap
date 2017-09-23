@@ -8,6 +8,10 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 import styles from './Login.styles'
 
+import { ShiftUp } from 'components/Animation'
+
+import Logo from 'components/Gui/Logo'
+
 class Login extends Component {
   constructor (props) {
     super(props)
@@ -15,13 +19,16 @@ class Login extends Component {
 
   render () {
     return (
-      <View style={styles.wrapper}>
-        <KeyboardAwareScrollView>
+      <KeyboardAwareScrollView>
+        <View style={styles.wrapper}>
           <View style={styles.container}>
-            <LoginForm />
+            <Logo />
+            <ShiftUp>
+              <LoginForm />
+            </ShiftUp>
           </View>
-        </KeyboardAwareScrollView>
-      </View>
+        </View>
+      </KeyboardAwareScrollView>
     )
   }
 }

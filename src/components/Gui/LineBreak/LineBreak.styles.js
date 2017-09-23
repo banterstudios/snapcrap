@@ -15,7 +15,7 @@ export default StyleSheet.create({
     paddingRight: 10
   },
   linebreak: {
-    height: 2,
+    height: 1,
     width: '100%',
     backgroundColor: linebreakPrimary,
     marginTop: margin,

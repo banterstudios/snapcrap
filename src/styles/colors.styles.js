@@ -1,17 +1,23 @@
-const outerSpace = '#42494F'
-const charcoal = '#363E45'
+import { setOpacity } from 'utils/colorUtils'
+
+const pineapple = '#564256'
 const white = '#fff'
 const black = '#000'
 const spanishGray = '#979B9F'
 const transparent = 'transparent'
 
 // Backgrounds
-const backgroundPrimary = outerSpace
-const backgroundSecondary = charcoal
+const backgroundPrimary = pineapple
+const backgroundSecondary = pineapple
+
+// Buttons
+const buttonPrimary = white
+const buttonDisabled = setOpacity(buttonPrimary, 0.5)
 
 // Texts
 const textLight = white
 const textDark = black
+const textPrimary = spanishGray
 
 // Forms
 const placeholderPrimary = spanishGray
@@ -26,5 +32,8 @@ export {
   textDark,
   placeholderPrimary,
   linebreakPrimary,
-  transparent
+  transparent,
+  buttonPrimary,
+  textPrimary,
+  buttonDisabled
 }

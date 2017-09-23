@@ -16,6 +16,10 @@ import {
   PASSWORD_PLACEHOLDER
 } from 'data/form/placeholders'
 
+import RaisedButton from 'components/Buttons/RaisedButton'
+
+import formStyles from 'styles/form.styles'
+
 const LoginForm = (props) => {
   return (
     <View>
@@ -28,13 +32,17 @@ const LoginForm = (props) => {
           type='email' />
       </View>
       <LineBreak />
-      <View>
+      <View style={formStyles.formGroupLg}>
         <Field
           secureTextEntry
           placeholder={PASSWORD_PLACEHOLDER}
           name='password'
           component={Input}
           type='password' />
+      </View>
+      <View>
+        <RaisedButton
+          text={'Login'} />
       </View>
     </View>
   )

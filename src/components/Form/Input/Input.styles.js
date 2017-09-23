@@ -2,10 +2,11 @@ import {
   StyleSheet
 } from 'react-native'
 
+import { textLight } from 'styles/colors.styles'
+
 export default StyleSheet.create({
   inputComponent: {
-    // marginTop: 20,
-    // paddingBottom: 20,
-    textAlign: 'center'
+    textAlign: 'center',
+    color: textLight
   }
 })
