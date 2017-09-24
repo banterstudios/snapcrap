@@ -20,6 +20,10 @@ import RaisedButton from 'components/Buttons/RaisedButton'
 
 import formStyles from 'styles/form.styles'
 
+import { Scale } from 'components/Animation'
+
+import commonStyles from 'styles/common.styles'
+
 const LoginForm = (props) => {
   return (
     <View>
@@ -28,16 +32,20 @@ const LoginForm = (props) => {
           placeholder={EMAIL_PLACEHOLDER}
           keyboardType={'email-address'}
           name='email'
+          inputStyle={commonStyles.textCenter}
           component={Input}
           type='email' />
       </View>
-      <LineBreak />
+      <Scale>
+        <LineBreak />
+      </Scale>
       <View style={formStyles.formGroupLg}>
         <Field
           secureTextEntry
           placeholder={PASSWORD_PLACEHOLDER}
           name='password'
           component={Input}
+          inputStyle={commonStyles.textCenter}
           type='password' />
       </View>
       <View style={formStyles.formGroup}>

@@ -6,10 +6,18 @@ import store from 'store'
 
 import Router from 'config/Router'
 
+import Startup from 'containers/Startup'
+
+import MainLayout from 'layouts/Main'
+
 const App = () => {
   return (
     <Provider store={store}>
-      { Router }
+      <Startup>
+        <MainLayout>
+          <Router />
+        </MainLayout>
+      </Startup>
     </Provider>
   )
 }

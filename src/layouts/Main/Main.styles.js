@@ -3,12 +3,11 @@ import {
 } from 'react-native'
 
 import {
-  textLight
-} from 'styles/colors.styles'
+  heightWithHeader
+} from 'styles/ui.styles'
 
 export default StyleSheet.create({
-  link: {
-    color: textLight,
-    opacity: 0.5
+  container: {
+    height: heightWithHeader
   }
 })

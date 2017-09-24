@@ -8,9 +8,9 @@ import {
   logo
 } from 'assets/images'
 
-import * as Animatable from 'react-native-animatable'
-
 import PropTypes from 'prop-types'
+
+import { FadeInImage } from 'components/Animation'
 
 const Logo = (props) => {
   const {
@@ -19,14 +19,18 @@ const Logo = (props) => {
 
   return (
     <View style={logoStyles.container}>
-      <Animatable.Image
-        animation='fadeIn'
+      <FadeInImage
+        width='100%'
+        height='100%'
+        src={logo}
         duration={duration}
-        easing='ease-out'
-        source={logo}
-        style={[{ width: '100%', height: '100%' }, logoStyles.logo]} />
+        style={logoStyles.logo} />
     </View>
   )
+}
+
+Logo.defaultProps = {
+  duration: 400
 }
 
 Logo.propTypes = {

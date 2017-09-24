@@ -8,16 +8,18 @@ import styles from './Login.styles'
 
 import formStyles from 'styles/form.styles'
 
-import * as Animatable from 'react-native-animatable'
-
 import Logo from 'components/Gui/Logo'
 
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view'
 
 import NavLink from 'components/Navigation/NavLink'
 
-const ANIM_DURATION = 800
-const ANIM_EASING = 'ease-out'
+import {
+  ShiftUp,
+  FadeInView
+} from 'components/Animation'
+
+const ANIM_DURATION = 400
 
 class Login extends Component {
   constructor (props) {
@@ -34,22 +36,15 @@ class Login extends Component {
                 <Logo
                   duration={ANIM_DURATION} />
               </View>
-              <Animatable.View
-                animation='bounceInUp'
-                easing={ANIM_EASING}
-                duration={ANIM_DURATION}
-              >
+              <ShiftUp duration={ANIM_DURATION}>
                 <View style={formStyles.formGroup}>
                   <LoginForm />
                 </View>
-              </Animatable.View>
-              <Animatable.View
-                animation='fadeIn'
-                easing={ANIM_EASING}
-                duration={ANIM_DURATION}
-              >
-                <NavLink text='Sign in' />
-              </Animatable.View>
+              </ShiftUp>
+              <FadeInView
+                duration={ANIM_DURATION}>
+                <NavLink text='Sign Up' />
+              </FadeInView>
             </View>
           </View>
         </KeyboardAwareScrollView>

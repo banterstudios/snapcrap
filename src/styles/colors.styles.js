@@ -1,14 +1,15 @@
 import { setOpacity } from 'utils/colorUtils'
 
-const pineapple = '#564256'
+const darkLiverHorses = '#5B4633'
+const cafeNoir = '#4C341E'
 const white = '#fff'
 const black = '#000'
 const spanishGray = '#979B9F'
 const transparent = 'transparent'
 
 // Backgrounds
-const backgroundPrimary = pineapple
-const backgroundSecondary = pineapple
+const backgroundPrimary = darkLiverHorses
+const backgroundSecondary = cafeNoir
 
 // Buttons
 const buttonPrimary = white

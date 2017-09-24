@@ -1,10 +1,6 @@
-import React from 'react'
-
 import { constructNavigatorOptions } from 'utils/navigationUtils'
 
 import { StackNavigator } from 'react-navigation'
-
-import Startup from 'containers/Startup'
 
 import Login from 'views/Login'
 
@@ -26,10 +22,4 @@ const Routes = StackNavigator({
   }
 })
 
-const Router = (
-  <Startup>
-    <Routes />
-  </Startup>
-)
-
-export default Router
+export default Routes
