@@ -14,6 +14,8 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 import NavLink from 'components/Navigation/NavLink'
 
+// import { NavigationActions } from 'react-navigation'
+
 import {
   ShiftUp,
   FadeInView
@@ -25,6 +27,26 @@ const KEYBOARD_EXTRA_HEIGHT = 120
 class Login extends Component {
   constructor (props) {
     super(props)
+
+    this.navigateFromLogin = this.navigateFromLogin.bind(this)
+  }
+
+  navigateFromLogin () {
+    this.props.navigation.navigate('Home')
+    /*
+    const {
+      navigation
+    } = this.props
+
+    const routeName = 'Home'
+
+    const resetAction = NavigationActions.reset({
+      index: 0,
+      actions: [NavigationActions.navigate({ routeName })]
+    })
+
+    navigation.dispatch(resetAction)
+    */
   }
 
   render () {
@@ -39,7 +61,8 @@ class Login extends Component {
               </View>
               <ShiftUp duration={ANIM_DURATION}>
                 <View style={formStyles.formGroup}>
-                  <LoginForm />
+                  <LoginForm
+                    onSubmit={this.navigateFromLogin} />
                 </View>
               </ShiftUp>
               <FadeInView

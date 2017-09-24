@@ -25,6 +25,10 @@ import { Scale } from 'components/Animation'
 import commonStyles from 'styles/common.styles'
 
 const LoginForm = (props) => {
+  const {
+    onSubmit
+  } = props
+
   return (
     <View>
       <View>
@@ -50,6 +54,7 @@ const LoginForm = (props) => {
       </View>
       <View style={formStyles.formGroup}>
         <RaisedButton
+          onPress={onSubmit}
           text={'Login'} />
       </View>
     </View>

@@ -4,11 +4,18 @@ import { StackNavigator } from 'react-navigation'
 
 import Login from 'views/Login'
 
+import Home from 'views/Home'
+
 const Routes = StackNavigator({
   Login: {
     screen: Login,
     navigationOptions: constructNavigatorOptions({
-      title: 'Login',
+      header: null
+    })
+  },
+  Home: {
+    screen: Home,
+    navigationOptions: constructNavigatorOptions({
       header: null
     })
   }
