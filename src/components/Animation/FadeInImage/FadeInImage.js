@@ -20,20 +20,19 @@ class FadeInImage extends Component {
   fadeIn () {
     const {
       delay,
-      duration
+      duration,
+      easing
     } = this.props
-
-    this.opacityValue.setValue(0)
 
     Animated.timing(
       this.opacityValue,
       {
         toValue: 1,
         duration,
-        easing: Easing.easeOut,
+        easing,
         delay
       }
-    )
+    ).start()
   }
 
   render () {
@@ -43,6 +42,8 @@ class FadeInImage extends Component {
       src,
       style
     } = this.props
+
+    console.log(this.opacityValue)
 
     return (
       <Animated.Image
@@ -66,12 +67,14 @@ FadeInImage.propTypes = {
   src: PropTypes.oneOfType([
     PropTypes.number,
     PropTypes.string
-  ])
+  ]),
+  easing: PropTypes.func
 }
 
 FadeInImage.defaultProps = {
   delay: 0,
-  duration: 400
+  duration: 400,
+  easing: Easing.easeOut
 }
 
 export default FadeInImage

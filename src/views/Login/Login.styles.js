@@ -11,6 +11,9 @@ import {
 } from 'styles/ui.styles'
 
 export default StyleSheet.create({
+  awareScrollContainer: {
+    height: heightWithHeader
+  },
   wrapper: {
     flex: 1,
     flexDirection: 'row',
@@ -23,6 +26,12 @@ export default StyleSheet.create({
   container: {
     flex: 1,
     width: '100%',
-    padding: 20
+    padding: 20,
+    height: '100%',
+    justifyContent: 'space-between'
+  },
+  logo: {
+    marginTop: 20,
+    alignItems: 'center'
   }
 })

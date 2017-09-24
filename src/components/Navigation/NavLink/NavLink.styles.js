@@ -2,10 +2,12 @@ import {
   StyleSheet
 } from 'react-native'
 
-import { textLight } from 'styles/colors.styles'
+import {
+  textLight
+} from 'styles/colors.styles'
 
 export default StyleSheet.create({
-  inputComponent: {
+  link: {
     color: textLight
   }
 })

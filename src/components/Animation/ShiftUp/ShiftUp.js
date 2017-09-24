@@ -1,30 +1,41 @@
 import React, { Component } from 'react'
 
-import { Animated } from 'react-native'
+import { Animated, Easing } from 'react-native'
+
+import PropTypes from 'prop-types'
 
 class ShiftUp extends Component {
   constructor (props) {
     super(props)
 
-    this.springValue = new Animated.Value(40)
+    this.shiftValue = new Animated.Value(80)
+    this.opacityValue = new Animated.Value(0)
 
-    this.spring = this.spring.bind(this)
+    this.shift = this.shift.bind(this)
+    this.calculateTiming = this.calculateTiming.bind(this)
   }
 
   componentDidMount () {
-    this.spring()
+    this.shift()
   }
 
-  spring () {
-    this.springValue.setValue(40)
-    Animated.spring(
-      this.springValue,
-      {
-        toValue: 0,
-        friction: 2,
-        tension: 1
-      }
-    ).start()
+  calculateTiming (value, toValue, duration, easing, delay) {
+    return Animated.timing(value, { toValue, duration, easing, delay })
+  }
+
+  shift () {
+    const {
+      delay,
+      duration,
+      easing
+    } = this.props
+
+    Animated.sequence([
+      Animated.parallel([
+        this.calculateTiming(this.shiftValue, 0, duration, easing, delay),
+        this.calculateTiming(this.opacityValue, 1, duration, easing, delay)
+      ])
+    ]).start()
   }
 
   render () {
@@ -34,11 +45,23 @@ class ShiftUp extends Component {
 
     return (
       <Animated.View
-        style={{ top: this.springValue }}>
+        style={{ top: this.shiftValue, opacity: this.opacityValue }}>
         {children}
       </Animated.View>
     )
   }
+}
+
+ShiftUp.propTypes = {
+  delay: PropTypes.number,
+  duration: PropTypes.number,
+  easing: PropTypes.func
+}
+
+ShiftUp.defaultProps = {
+  delay: 0,
+  duration: 400,
+  easing: Easing.easeOut
 }
 
 export default ShiftUp

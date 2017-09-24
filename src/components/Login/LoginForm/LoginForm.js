@@ -40,7 +40,7 @@ const LoginForm = (props) => {
           component={Input}
           type='password' />
       </View>
-      <View>
+      <View style={formStyles.formGroup}>
         <RaisedButton
           text={'Login'} />
       </View>

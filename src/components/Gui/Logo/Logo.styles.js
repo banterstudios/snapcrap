@@ -5,8 +5,8 @@ import {
 export default StyleSheet.create({
   container: {
     justifyContent: 'center',
-    width: 120,
-    height: 120
+    width: 100,
+    height: 100
   },
   logo: {
     width: '100%',

@@ -12,6 +12,8 @@ import {
 
 import typoStyles from 'styles/typography.styles'
 
+import commonStyles from 'styles/common.styles'
+
 class Input extends Component {
   constructor (props) {
     super(props)
@@ -48,7 +50,7 @@ class Input extends Component {
         <View style={[containerStyle]}>
           <TextInput
             ref={this.setInputRef}
-            style={[styles.inputComponent, typoStyles.text, inputStyle]}
+            style={[styles.inputComponent, typoStyles.text, commonStyles.textCenter, inputStyle]}
             multiline={multiline}
             numberOfLines={numberOfLines}
             onChangeText={onChange}
