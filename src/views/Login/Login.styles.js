@@ -32,6 +32,8 @@ export default StyleSheet.create({
   },
   logo: {
     marginTop: 20,
-    alignItems: 'center'
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexGrow: 1
   }
 })

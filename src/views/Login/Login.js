@@ -20,6 +20,7 @@ import {
 } from 'components/Animation'
 
 const ANIM_DURATION = 400
+const KEYBOARD_EXTRA_HEIGHT = 120
 
 class Login extends Component {
   constructor (props) {
@@ -29,7 +30,7 @@ class Login extends Component {
   render () {
     return (
       <View style={styles.awareScrollContainer}>
-        <KeyboardAwareScrollView>
+        <KeyboardAwareScrollView enableOnAndroid extraHeight={KEYBOARD_EXTRA_HEIGHT}>
           <View style={styles.wrapper}>
             <View style={styles.container}>
               <View style={[formStyles.formGroup, styles.logo]}>
