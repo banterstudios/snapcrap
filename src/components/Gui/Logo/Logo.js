@@ -10,17 +10,27 @@ import {
 
 import * as Animatable from 'react-native-animatable'
 
+import PropTypes from 'prop-types'
+
 const Logo = (props) => {
+  const {
+    duration
+  } = props
+
   return (
     <View style={logoStyles.container}>
       <Animatable.Image
         animation='fadeIn'
-        duration={400}
+        duration={duration}
         easing='ease-out'
         source={logo}
         style={[{ width: '100%', height: '100%' }, logoStyles.logo]} />
     </View>
   )
+}
+
+Logo.propTypes = {
+  duration: PropTypes.number
 }
 
 export default Logo

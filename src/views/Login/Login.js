@@ -16,7 +16,7 @@ import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view
 
 import NavLink from 'components/Navigation/NavLink'
 
-const ANIM_DURATION = 400
+const ANIM_DURATION = 800
 const ANIM_EASING = 'ease-out'
 
 class Login extends Component {
@@ -31,7 +31,8 @@ class Login extends Component {
           <View style={styles.wrapper}>
             <View style={styles.container}>
               <View style={[formStyles.formGroup, styles.logo]}>
-                <Logo />
+                <Logo
+                  duration={ANIM_DURATION} />
               </View>
               <Animatable.View
                 animation='bounceInUp'
